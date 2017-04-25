@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>recursiveProcessing</title>
+</head>
+<body>
+<script src="recursiveProcessing.js" ></script>
+<script src="data.js"></script>
+<script>
+    recursiveProcessing(datas,function(currentData,level,idx,currentDatas,upperData,datas){
+        console.log(".................................");
+        console.log("当前数据:",currentData);
+        console.log("当前数据所在的层级:",level);
+        console.log("为每一条数据添加一个新属性text,值为数据中的name属性的值");
+        currentData.text=currentData.name;
+    },"children");
+    console.log("所有的数据",JSON.stringify(datas));
+</script>
+</body>
+</html>
